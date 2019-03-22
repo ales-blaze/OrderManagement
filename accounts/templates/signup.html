@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %} SignUp | JMIT {% endblock %}
+{% block content %}
+<h2>Cafe | Signup</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">SignUp</button>
+</form>
+{% endblock %}
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+    <!--<meta charset="UTF-8">-->
+    <!--<title>SignUp|JMIT</title>-->
+<!--</head>-->
+<!--<body>-->
+
+<!--</body>-->
+<!--</html>-->
