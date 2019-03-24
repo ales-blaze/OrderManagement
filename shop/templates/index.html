@@ -1,20 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Cafe JMIT</title>
-</head>
-<body>
-    <h1>
-        Products
-    </h1>
-<ul>
+{% extends 'base.html' %}
+{% block title%} Canteen {% endblock %}
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--<meta charset="UTF-8">-->
+<!--<title>Cafe JMIT</title>-->
+<!--</head>-->
+<!--<body>-->
+{% block content %}
+<div class="row">
     {% for product in products %}
-    <!--<img src="" alt="">-->
-        <li>{{ product }} ({{ product.price }})</li>
+    <div class="col" style="padding: 2rem;">
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="{{ product.image }}" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">{{ product.name }}</h5>
+                <p class="card-text">{{product.description}}</p>
+                <a href="#" class="btn btn-primary">Add to cart</a>
+            </div>
+        </div>
+    </div>
     {% endfor %}
-</ul>
-
-
-</body>
-</html>
+</div>
+{% endblock %}
+<!--</body>-->
+<!--</html>-->

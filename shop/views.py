@@ -9,6 +9,3 @@ def index(request):
     return render(request, 'index.html',{'products': products})
 
 
-def new(request):
-    return HttpResponse("New Product")
-
